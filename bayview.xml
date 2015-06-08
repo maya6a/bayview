@@ -1,1 +1,52 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"></xml>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="controls_if" id="219" inline="false" x="77" y="37">
+    <value name="IF0">
+      <block type="sensor_button" id="74">
+        <field name="OBJECT">ENTER</field>
+      </block>
+    </value>
+    <statement name="DO0">
+      <block type="controls_whileUntil" id="32" inline="false">
+        <field name="MODE">WHILE</field>
+        <value name="NUMBER">
+          <block type="sensor_object" id="82">
+            <field name="OBJECT">LEFTSIDE</field>
+          </block>
+        </value>
+        <statement name="DO">
+          <block type="robot_delay" id="144" inline="true">
+            <value name="DELAY">
+              <block type="logic_compare" id="297" inline="true">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="math_number" id="335">
+                    <field name="NUM">80</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="396">
+                    <field name="NUM">50</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="movement_forward" id="99">
+                <next>
+                  <block type="movement_left" id="126">
+                    <next>
+                      <block type="movement_right" id="116"></block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+    <next>
+      <block type="movement_stop" id="197"></block>
+    </next>
+  </block>
+</xml>
