@@ -1,55 +1,42 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_if" id="219" inline="false" x="43" y="135">
-    <value name="IF0">
-      <block type="sensor_object" id="82">
-        <field name="OBJECT">LEFTSIDE</field>
+  <block type="controls_whileUntil" id="32" inline="false" x="34" y="-26">
+    <field name="MODE">UNTIL</field>
+    <value name="NUMBER">
+      <block type="sensor_button" id="74">
+        <field name="OBJECT">ENTER</field>
       </block>
     </value>
-    <statement name="DO0">
-      <block type="controls_whileUntil" id="32" inline="false">
-        <field name="MODE">UNTIL</field>
-        <value name="NUMBER">
-          <block type="sensor_button" id="74">
-            <field name="OBJECT">ENTER</field>
-          </block>
-        </value>
-        <statement name="DO">
-          <block type="robot_delay" id="144" inline="true">
-            <value name="DELAY">
-              <block type="logic_compare" id="297" inline="true">
-                <field name="OP">GT</field>
-                <value name="A">
-                  <block type="math_number" id="335">
-                    <field name="NUM">80</field>
-                  </block>
-                </value>
-                <value name="B">
-                  <block type="math_number" id="396">
-                    <field name="NUM">50</field>
-                  </block>
-                </value>
-              </block>
-            </value>
-            <next>
-              <block type="movement_forward" id="99">
-                <next>
-                  <block type="movement_left" id="126">
-                    <next>
-                      <block type="movement_right" id="116"></block>
-                    </next>
-                  </block>
-                </next>
-              </block>
-            </next>
-          </block>
+    <statement name="DO">
+      <block type="controls_if" id="219" inline="false">
+        <statement name="DO0">
+          <block type="robot_delay" id="144" inline="true"></block>
         </statement>
-        <next>
-          <block type="movement_stop" id="197"></block>
-        </next>
       </block>
     </statement>
     <next>
-      <block type="movement_stop" id="440"></block>
+      <block type="movement_stop" id="197"></block>
     </next>
+  </block>
+  <block type="logic_compare" id="297" inline="true" x="208" y="79">
+    <field name="OP">GT</field>
+    <value name="A">
+      <block type="math_number" id="335">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <value name="B">
+      <block type="math_number" id="396">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+  </block>
+  <block type="movement_forward" id="99" x="188" y="160"></block>
+  <block type="movement_left" id="126" x="191" y="232">
+    <next>
+      <block type="movement_right" id="116"></block>
+    </next>
+  </block>
+  <block type="sensor_object" id="82" x="266" y="383">
+    <field name="OBJECT">LEFTSIDE</field>
   </block>
 </xml>
