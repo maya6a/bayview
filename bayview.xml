@@ -17,7 +17,7 @@
           <block type="robot_delay" id="144" inline="true">
             <value name="DELAY">
               <block type="logic_compare" id="297" inline="true">
-                <field name="OP">EQ</field>
+                <field name="OP">GT</field>
                 <value name="A">
                   <block type="math_number" id="335">
                     <field name="NUM">80</field>
@@ -43,10 +43,10 @@
             </next>
           </block>
         </statement>
-        <next>
-          <block type="movement_stop" id="197"></block>
-        </next>
       </block>
     </statement>
+    <next>
+      <block type="movement_stop" id="197"></block>
+    </next>
   </block>
 </xml>
