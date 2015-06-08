@@ -1,42 +1,42 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_whileUntil" id="32" inline="false" x="34" y="-26">
+  <block type="controls_whileUntil" id="1" inline="false" x="34" y="-26">
     <field name="MODE">UNTIL</field>
     <value name="NUMBER">
-      <block type="sensor_button" id="74">
+      <block type="sensor_button" id="2">
         <field name="OBJECT">ENTER</field>
       </block>
     </value>
     <statement name="DO">
-      <block type="controls_if" id="219" inline="false">
+      <block type="controls_if" id="3" inline="false">
         <statement name="DO0">
-          <block type="robot_delay" id="144" inline="true"></block>
+          <block type="robot_delay" id="4" inline="true"></block>
         </statement>
       </block>
     </statement>
     <next>
-      <block type="movement_stop" id="197"></block>
+      <block type="movement_stop" id="5"></block>
     </next>
   </block>
-  <block type="logic_compare" id="297" inline="true" x="208" y="79">
+  <block type="logic_compare" id="6" inline="true" x="208" y="79">
     <field name="OP">GT</field>
     <value name="A">
-      <block type="math_number" id="335">
+      <block type="math_number" id="7">
         <field name="NUM">0</field>
       </block>
     </value>
     <value name="B">
-      <block type="math_number" id="396">
+      <block type="math_number" id="8">
         <field name="NUM">0</field>
       </block>
     </value>
   </block>
-  <block type="movement_forward" id="99" x="188" y="160"></block>
-  <block type="movement_left" id="126" x="191" y="232">
+  <block type="movement_forward" id="9" x="188" y="160"></block>
+  <block type="movement_left" id="10" x="191" y="232">
     <next>
-      <block type="movement_right" id="116"></block>
+      <block type="movement_right" id="11"></block>
     </next>
   </block>
-  <block type="sensor_object" id="82" x="266" y="383">
+  <block type="sensor_object" id="12" x="266" y="383">
     <field name="OBJECT">LEFTSIDE</field>
   </block>
 </xml>
